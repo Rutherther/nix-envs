@@ -14,6 +14,7 @@
     packages.x86_64-linux.matlab-mlint = nix-matlab.packages.x86_64-linux.matlab-mlint;
     packages.x86_64-linux.matlab-mex = nix-matlab.packages.x86_64-linux.matlab-mex;
     packages.x86_64-linux.octave = pkgs.octaveFull;
+    packages.x86_64-linux.default = self.packages.x86_64-linux.matlab;
 
     devShells.x86_64-linux.default = pkgs.mkShell {
       buildInputs = (with nix-matlab.packages.x86_64-linux; [
